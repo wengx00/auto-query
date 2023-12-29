@@ -2,7 +2,7 @@
   "name": "auto-query",
   "version": "1.0.0",
   "main": "main.ts",
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "scripts": {
     "build": "./node_modules/.bin/esbuild main.ts --platform=node --format=cjs --bundle --outfile=./build/main.js --target=es2016",
     "start": "./node_modules/.bin/esbuild main.ts --platform=node --format=cjs --bundle --outfile=./build/main.js --target=es2016 && ./node_modules/.bin/pm2 start ./build/main.js --name app",
