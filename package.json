@@ -4,12 +4,12 @@
   "main": "main.ts",
   "license": "MIT",
   "scripts": {
-    "build": "export PATH=$PATH:./node_modules/.bin/ && esbuild main.ts --platform=node --format=cjs --bundle --outfile=./build/main.js --target=es2016",
-    "start": "export PATH=$PATH:./node_modules/.bin/ && npm run build && pm2 start ./build/main.js --name app",
-    "status": "export PATH=$PATH:./node_modules/.bin/ && pm2 status",
-    "remove": "export PATH=$PATH:./node_modules/.bin/ && pm2 stop app && pm2 delete app",
-    "dev": "export PATH=$PATH:./node_modules/.bin/ && ts-node-dev main.ts",
-    "log": "export PATH=$PATH:./node_modules/.bin/ && pm2 log app"
+    "build": "./node_modules/.bin/esbuild main.ts --platform=node --format=cjs --bundle --outfile=./build/main.js --target=es2016",
+    "start": "./node_modules/.bin/esbuild main.ts --platform=node --format=cjs --bundle --outfile=./build/main.js --target=es2016 && ./node_modules/.bin/pm2 start ./build/main.js --name app",
+    "status": "./node_modules/.bin/pm2 status",
+    "remove": "./node_modules/.bin/pm2 stop app && ./node_modules/.bin/pm2 delete app",
+    "dev": "./node_modules/.bin/ts-node-dev main.ts",
+    "log": "./node_modules/.bin/pm2 log app"
   },
   "dependencies": {
     "cookie": "^0.6.0",
